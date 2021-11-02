@@ -8,3 +8,5 @@ The GUI allows for per-channel tone selection and editing of CC parameters inclu
 
 Devices are defined using a JSON file. Another JSON file is used to define the tone list.
 Tones are divided into categories, and each tone has a PC, bank MSB, and bank LSB value.
+
+Example device files can be found in the Example/ folder.
