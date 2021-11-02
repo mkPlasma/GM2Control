@@ -1,0 +1,2158 @@
+{
+	"Piano": [
+		{
+			"index": 0
+		},
+		{
+			"name": "SK-EX Rendering",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 122
+		},
+		{
+			"name": "SK-EX | Concert",
+			"pc": 1,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "SK-EX | Jazz Clean",
+			"pc": 1,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "SK-EX | Warm",
+			"pc": 1,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "EX | Concert",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 27
+		},
+		{
+			"name": "EX | Warm",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 29
+		},
+		{
+			"name": "EX | Standard",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 16
+		},
+		{
+			"name": "EX | Pop Grand",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 28
+		},
+		{
+			"name": "EX | Pop Piano",
+			"pc": 2,
+			"msb": 95,
+			"lsb": 10
+		},
+		{
+			"name": "EX | New Age",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 17
+		},
+		{
+			"name": "EX | Modern",
+			"pc": 2,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "SK-5 | Classical",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 30
+		},
+		{
+			"name": "SK-5 | Jazz Old School",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 32
+		},
+		{
+			"name": "SK-5 | Pop",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 31
+		},
+		{
+			"name": "Upright | Classical",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 25
+		},
+		{
+			"name": "Upright | Boogie",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 33
+		},
+		{
+			"name": "Upright | HonkyTonk",
+			"pc": 4,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Wide HonkyTonk",
+			"pc": 4,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "GP | Etude",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 18
+		},
+		{
+			"name": "GP | Canon",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 19
+		},
+		{
+			"name": "GP | Ballad (Upright Piano 2)",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 26
+		},
+		{
+			"name": "GP | Prelude",
+			"pc": 2,
+			"msb": 95,
+			"lsb": 9
+		},
+		{
+			"name": "GP | Polonaise",
+			"pc": 2,
+			"msb": 95,
+			"lsb": 13
+		},
+		{
+			"name": "GP | March",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 8
+		},
+		{
+			"name": "GP | Mazurka (Rock Piano)",
+			"pc": 2,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "GP | Minuet",
+			"pc": 2,
+			"msb": 95,
+			"lsb": 8
+		},
+		{
+			"name": "GP | Rhapsody (Upright Piano 3)",
+			"pc": 1,
+			"msb": 95,
+			"lsb": 34
+		},
+		{
+			"name": "GP | Waltz",
+			"pc": 2,
+			"msb": 95,
+			"lsb": 14
+		}
+	],
+	"Electric Piano": [
+		{
+			"index": 1
+		},
+		{
+			"name": "Classic EP",
+			"pc": 5,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Classic EP 2",
+			"pc": 5,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Classic EP 3",
+			"pc": 5,
+			"msb": 95,
+			"lsb": 5
+		},
+		{
+			"name": "Classic EP 4",
+			"pc": 5,
+			"msb": 95,
+			"lsb": 8
+		},
+		{
+			"name": "Classic EP 5",
+			"pc": 5,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "60's EP",
+			"pc": 5,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Modern EP",
+			"pc": 6,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Modern EP 2",
+			"pc": 6,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Modern EP 3",
+			"pc": 6,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Crystal EP",
+			"pc": 6,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Legend EP",
+			"pc": 6,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Phase EP",
+			"pc": 6,
+			"msb": 121,
+			"lsb": 4
+		},
+		{
+			"name": "Electric Grand",
+			"pc": 3,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Electric Grand 2",
+			"pc": 3,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Clavi",
+			"pc": 8,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Synth Clavi",
+			"pc": 8,
+			"msb": 121,
+			"lsb": 1
+		}
+	],
+	"Harpsichord": [
+		{
+			"index": 2
+		},
+		{
+			"name": "Harpsichord",
+			"pc": 7,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Harpsichord Octave",
+			"pc": 7,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Harpsichord 2",
+			"pc": 7,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Wide Harpsichord",
+			"pc": 7,
+			"msb": 121,
+			"lsb": 2
+		}
+	],
+	"Chromatic percussion": [
+		{
+			"index": 3
+		},
+		{
+			"name": "Celesta",
+			"pc": 9,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Celesta 2",
+			"pc": 9,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Glockenspiel",
+			"pc": 10,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Music Box",
+			"pc": 11,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Toy Piano",
+			"pc": 11,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Music Box OctUP",
+			"pc": 11,
+			"msb": 95,
+			"lsb": 3
+		},
+		{
+			"name": "Vibraphone",
+			"pc": 12,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Wide Vibraphone",
+			"pc": 12,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Marimba",
+			"pc": 13,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Wide Marimba",
+			"pc": 13,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Xylophone",
+			"pc": 14,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Tubular Bells",
+			"pc": 15,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Church Bells",
+			"pc": 15,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Carillon",
+			"pc": 15,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Dulcimer",
+			"pc": 16,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Bell Split",
+			"pc": 15,
+			"msb": 95,
+			"lsb": 5
+		}
+	],
+	"Organ": [
+		{
+			"index": 4
+		},
+		{
+			"name": "Jazz Organ",
+			"pc": 18,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Blues Organ",
+			"pc": 17,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Ballad Organ",
+			"pc": 17,
+			"msb": 95,
+			"lsb": 5
+		},
+		{
+			"name": "Gospel Organ",
+			"pc": 17,
+			"msb": 95,
+			"lsb": 3
+		},
+		{
+			"name": "Drawbar Organ",
+			"pc": 17,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Drawbar Organ 2",
+			"pc": 17,
+			"msb": 95,
+			"lsb": 2
+		},
+		{
+			"name": "Drawbar Organ 3",
+			"pc": 17,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Drawbar Organ 4",
+			"pc": 17,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Drawbar Organ 5",
+			"pc": 17,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "60's Organ",
+			"pc": 17,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Perc. Organ",
+			"pc": 18,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Rock Organ",
+			"pc": 19,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Reed Organ",
+			"pc": 21,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Puff Organ",
+			"pc": 21,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "FrenchAccordion",
+			"pc": 22,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Accordion",
+			"pc": 22,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Harmonica",
+			"pc": 23,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Tango Accordion",
+			"pc": 24,
+			"msb": 121,
+			"lsb": 0
+		}
+	],
+	"Church Organ": [
+		{
+			"index": 5
+		},
+		{
+			"name": "Church Organ",
+			"pc": 20,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Church Organ 2",
+			"pc": 20,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Church Organ 3",
+			"pc": 20,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Diaspon",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 7
+		},
+		{
+			"name": "Full Ensemble",
+			"pc": 21,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Diaspon Octave",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 6
+		},
+		{
+			"name": "Chiffy Tibia",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 17
+		},
+		{
+			"name": "Principal Octave",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 24
+		},
+		{
+			"name": "Principal Choir",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 23
+		},
+		{
+			"name": "Baroque",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 19
+		},
+		{
+			"name": "Soft Diaspon",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 45
+		},
+		{
+			"name": "Soft Strings",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 41
+		},
+		{
+			"name": "Mellow Flutes",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 48
+		},
+		{
+			"name": "Medium Ensemble",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 42
+		},
+		{
+			"name": "Loud Ensemble",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 43
+		},
+		{
+			"name": "Bright Ensemble",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 47
+		},
+		{
+			"name": "Full Organ",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 44
+		},
+		{
+			"name": "Reed Ensemble",
+			"pc": 20,
+			"msb": 95,
+			"lsb": 46
+		}
+	],
+	"Bass": [
+		{
+			"index": 6
+		},
+		{
+			"name": "Wood Bass (Acoustic)",
+			"pc": 33,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Wood Bass & Ride (Acoustic)",
+			"pc": 33,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Electric Bass",
+			"pc": 34,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Electric Bass & Ride",
+			"pc": 34,
+			"msb": 95,
+			"lsb": 2
+		},
+		{
+			"name": "FingerSlap Bass",
+			"pc": 34,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Pick Bass",
+			"pc": 35,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Electric Bass 2 (Fretless)",
+			"pc": 36,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Slap Bass",
+			"pc": 37,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Slap Bass 2",
+			"pc": 38,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Synth Bass",
+			"pc": 39,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Warm Synth Bass",
+			"pc": 39,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Synth Bass 3",
+			"pc": 39,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Clavi Bass",
+			"pc": 39,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Hammer Bass",
+			"pc": 39,
+			"msb": 121,
+			"lsb": 4
+		},
+		{
+			"name": "Synth Bass 2",
+			"pc": 40,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Synth Bass 4",
+			"pc": 40,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Rubber Bass",
+			"pc": 40,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Attack Bass",
+			"pc": 40,
+			"msb": 121,
+			"lsb": 3
+		}
+	],
+	"Guitar": [
+		{
+			"index": 7
+		},
+		{
+			"name": "Ballad Guitar",
+			"pc": 26,
+			"msb": 95,
+			"lsb": 6
+		},
+		{
+			"name": "Pick Nylon Guitar",
+			"pc": 25,
+			"msb": 95,
+			"lsb": 3
+		},
+		{
+			"name": "Finger Nylon Guitar",
+			"pc": 25,
+			"msb": 95,
+			"lsb": 4
+		},
+		{
+			"name": "Nylon Acoustic",
+			"pc": 25,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Ukulele",
+			"pc": 25,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Nylon Acoustic2",
+			"pc": 25,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Nylon Acoustic3",
+			"pc": 25,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Steel Guitar",
+			"pc": 26,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "12 String",
+			"pc": 26,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Mandolin",
+			"pc": 26,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Steel Guitar 2",
+			"pc": 26,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Jazz Guitar",
+			"pc": 27,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Pedal Steel",
+			"pc": 27,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Electric Guitar",
+			"pc": 28,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "E. Guitar 2",
+			"pc": 28,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Rhythm Guitar",
+			"pc": 28,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Muted Electric",
+			"pc": 29,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Cutting Guitar2",
+			"pc": 29,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "E. Guitar 3",
+			"pc": 29,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Country Lead",
+			"pc": 29,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "OverdriveGuitar",
+			"pc": 30,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Dynamic Overdrive",
+			"pc": 30,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Distortion",
+			"pc": 31,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Dist Feedback",
+			"pc": 31,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Dist Rythm",
+			"pc": 31,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "E.Gtr Harmonics",
+			"pc": 32,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Guitar Feedback",
+			"pc": 32,
+			"msb": 121,
+			"lsb": 1
+		}
+	],
+	"Strings / Orchestra": [
+		{
+			"index": 8
+		},
+		{
+			"name": "Violin",
+			"pc": 41,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Slow Violin",
+			"pc": 41,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Viola",
+			"pc": 42,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Cello",
+			"pc": 43,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Contrabass",
+			"pc": 44,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Tremolo Strings",
+			"pc": 45,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Pizzicato Strings",
+			"pc": 46,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Harp",
+			"pc": 47,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Celtic Harp",
+			"pc": 47,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Timpani",
+			"pc": 48,
+			"msb": 121,
+			"lsb": 0
+		}
+	],
+	"String Ensemble": [
+		{
+			"index": 9
+		},
+		{
+			"name": "Slow Strings",
+			"pc": 45,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "String Pad",
+			"pc": 49,
+			"msb": 95,
+			"lsb": 8
+		},
+		{
+			"name": "Warm Strings",
+			"pc": 49,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Chamber Strings",
+			"pc": 49,
+			"msb": 95,
+			"lsb": 14
+		},
+		{
+			"name": "String Ensemble",
+			"pc": 49,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "String Ensemble2",
+			"pc": 50,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Soft Orchestra",
+			"pc": 50,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Strings & Brass",
+			"pc": 49,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "60's Strings",
+			"pc": 49,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Synth Strings",
+			"pc": 51,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Synth Strings 3",
+			"pc": 51,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Synth Strings 2",
+			"pc": 52,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Orchestra Hit",
+			"pc": 56,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Bass Hit Plus",
+			"pc": 56,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "6th Hit",
+			"pc": 56,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Euro Hit",
+			"pc": 56,
+			"msb": 121,
+			"lsb": 3
+		}
+	],
+	"Vocal": [
+		{
+			"index": 10
+		},
+		{
+			"name": "Choir",
+			"pc": 53,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Choir 2",
+			"pc": 54,
+			"msb": 95,
+			"lsb": 53
+		},
+		{
+			"name": "Choir 3",
+			"pc": 53,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Slow Choir",
+			"pc": 53,
+			"msb": 95,
+			"lsb": 2
+		},
+		{
+			"name": "Breathy Choir",
+			"pc": 53,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Pop Ooh",
+			"pc": 54,
+			"msb": 95,
+			"lsb": 39
+		},
+		{
+			"name": "Pop Aah",
+			"pc": 54,
+			"msb": 95,
+			"lsb": 40
+		},
+		{
+			"name": "Jazz Ensemble",
+			"pc": 54,
+			"msb": 95,
+			"lsb": 2
+		},
+		{
+			"name": "Pop Ensemble",
+			"pc": 54,
+			"msb": 95,
+			"lsb": 7
+		},
+		{
+			"name": "Voices Oohs",
+			"pc": 54,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Humming",
+			"pc": 54,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "DoReMi #",
+			"pc": 54,
+			"msb": 95,
+			"lsb": 51
+		},
+		{
+			"name": "DoReMi b",
+			"pc": 54,
+			"msb": 95,
+			"lsb": 52
+		},
+		{
+			"name": "Synth Vocal",
+			"pc": 55,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Analog Voice",
+			"pc": 55,
+			"msb": 121,
+			"lsb": 1
+		}
+	],
+	"Brass": [
+		{
+			"index": 11
+		},
+		{
+			"name": "Trumpet",
+			"pc": 57,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Solo Trumpet",
+			"pc": 57,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Trombone",
+			"pc": 58,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Trombone 2",
+			"pc": 58,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Bright Trombone",
+			"pc": 58,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Tuba",
+			"pc": 59,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Muted Trumpet",
+			"pc": 60,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Muted Trumpet 2",
+			"pc": 60,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "French Horns",
+			"pc": 61,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Warm FrenchHorn",
+			"pc": 61,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Brass Section",
+			"pc": 62,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Brass Section 2",
+			"pc": 62,
+			"msb": 121,
+			"lsb": 1
+		}
+	],
+	"Synth Brass": [
+		{
+			"index": 12
+		},
+		{
+			"name": "Synth Brass",
+			"pc": 63,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Synth Brass 3",
+			"pc": 63,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Analog Brass",
+			"pc": 63,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Jump Brass",
+			"pc": 63,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "SynthBrass 2",
+			"pc": 64,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "SynthBrass 4",
+			"pc": 64,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Analog Brass 2",
+			"pc": 64,
+			"msb": 121,
+			"lsb": 2
+		}
+	],
+	"Reed": [
+		{
+			"index": 13
+		},
+		{
+			"name": "Soprano Sax",
+			"pc": 65,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Alto Sax",
+			"pc": 66,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Tenor Sax",
+			"pc": 67,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Baritone Sax",
+			"pc": 68,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Oboe",
+			"pc": 69,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "English Horn",
+			"pc": 70,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Bassoon",
+			"pc": 71,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Clarinet",
+			"pc": 72,
+			"msb": 121,
+			"lsb": 0
+		}
+	],
+	"Pipe": [
+		{
+			"index": 14
+		},
+		{
+			"name": "Piccolo",
+			"pc": 73,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Flute",
+			"pc": 74,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Recorder",
+			"pc": 75,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Pan Flute",
+			"pc": 76,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Blown Bottle",
+			"pc": 77,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Shakuhachi",
+			"pc": 78,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Whistle",
+			"pc": 79,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Ocarina",
+			"pc": 80,
+			"msb": 121,
+			"lsb": 0
+		}
+	],
+	"Synth Lead": [
+		{
+			"index": 15
+		},
+		{
+			"name": "Square",
+			"pc": 81,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Square 2",
+			"pc": 81,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Sine",
+			"pc": 81,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Sine Ex",
+			"pc": 81,
+			"msb": 95,
+			"lsb": 4
+		},
+		{
+			"name": "Classic Synth",
+			"pc": 82,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Classic Synth 2",
+			"pc": 82,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Lead",
+			"pc": 82,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Classic Synth 3",
+			"pc": 82,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "SequencedAnalog",
+			"pc": 82,
+			"msb": 121,
+			"lsb": 4
+		},
+		{
+			"name": "Saw Ex",
+			"pc": 82,
+			"msb": 95,
+			"lsb": 6
+		},
+		{
+			"name": "Calliope",
+			"pc": 83,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Chiff",
+			"pc": 84,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Charang",
+			"pc": 85,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Wire Lead",
+			"pc": 85,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Voice",
+			"pc": 86,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Fifth",
+			"pc": 87,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Bass & Lead",
+			"pc": 88,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Soft Wire Lead",
+			"pc": 88,
+			"msb": 121,
+			"lsb": 1
+		}
+	],
+	"Synth Pad": [
+		{
+			"index": 16
+		},
+		{
+			"name": "New Age Pad",
+			"pc": 89,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "New Age Pad 2",
+			"pc": 89,
+			"msb": 95,
+			"lsb": 2
+		},
+		{
+			"name": "Square Pad",
+			"pc": 90,
+			"msb": 95,
+			"lsb": 5
+		},
+		{
+			"name": "Brass Pad",
+			"pc": 62,
+			"msb": 95,
+			"lsb": 2
+		},
+		{
+			"name": "Bright Warm Pad",
+			"pc": 90,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Warm Pad",
+			"pc": 90,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Sine Pad",
+			"pc": 90,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Polysynth",
+			"pc": 91,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Choir Pad",
+			"pc": 92,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Itopia",
+			"pc": 92,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Bowed Pad",
+			"pc": 93,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Metallic Pad",
+			"pc": 94,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Halo Pad",
+			"pc": 95,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Sweep Pad",
+			"pc": 96,
+			"msb": 121,
+			"lsb": 0
+		}
+	],
+	"Synth SFX": [
+		{
+			"index": 17
+		},
+		{
+			"name": "Rain Pad",
+			"pc": 97,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Soundtrack",
+			"pc": 98,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Crystal",
+			"pc": 99,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Synth Mallet",
+			"pc": 99,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Atmosphere",
+			"pc": 100,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Brightness",
+			"pc": 101,
+			"msb": 95,
+			"lsb": 1
+		},
+		{
+			"name": "Brightness 2",
+			"pc": 101,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Goblin",
+			"pc": 102,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Echoes",
+			"pc": 103,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Echo Bell",
+			"pc": 103,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Echo Pan",
+			"pc": 103,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Sci-Fi",
+			"pc": 104,
+			"msb": 121,
+			"lsb": 0
+		}
+	],
+	"Ethnic": [
+		{
+			"index": 18
+		},
+		{
+			"name": "Sitar",
+			"pc": 105,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Sitar 2",
+			"pc": 105,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Banjo",
+			"pc": 106,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Shamisen",
+			"pc": 107,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Koto",
+			"pc": 108,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Taisho Koto",
+			"pc": 108,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Kalimba",
+			"pc": 109,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Bag Pipe",
+			"pc": 110,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Fiddle",
+			"pc": 111,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Shanai",
+			"pc": 112,
+			"msb": 121,
+			"lsb": 0
+		}
+	],
+	"Percussive": [
+		{
+			"index": 19
+		},
+		{
+			"name": "Tinkle Bell",
+			"pc": 113,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Agogo",
+			"pc": 114,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Steel Drums",
+			"pc": 115,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Woodblock",
+			"pc": 116,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Castanet",
+			"pc": 116,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Metronome",
+			"pc": 116,
+			"msb": 95,
+			"lsb": 2
+		},
+		{
+			"name": "Taiko",
+			"pc": 117,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Concert BD",
+			"pc": 117,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Melodic Toms",
+			"pc": 118,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Melodic Toms 2",
+			"pc": 118,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Synth Drum",
+			"pc": 119,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Rhythm Box Tom",
+			"pc": 119,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Electric Drum",
+			"pc": 119,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Reverse Cymbal",
+			"pc": 120,
+			"msb": 121,
+			"lsb": 0
+		}
+	],
+	"SFX": [
+		{
+			"index": 20
+		},
+		{
+			"name": "Gtr Fret Noise",
+			"pc": 121,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Gtr Cutting Noise",
+			"pc": 121,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Ac Bass Slap",
+			"pc": 121,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Breath Noise",
+			"pc": 122,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Flute Key Click",
+			"pc": 122,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Seashore",
+			"pc": 123,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Rain",
+			"pc": 123,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Thunder",
+			"pc": 123,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Wind",
+			"pc": 123,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Stream",
+			"pc": 123,
+			"msb": 121,
+			"lsb": 4
+		},
+		{
+			"name": "Bubble",
+			"pc": 123,
+			"msb": 121,
+			"lsb": 5
+		},
+		{
+			"name": "Bird Tweet",
+			"pc": 124,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Dog",
+			"pc": 124,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Horse Gallop",
+			"pc": 124,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Bird Tweet 2",
+			"pc": 124,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Cat&Dog&Harp",
+			"pc": 124,
+			"msb": 95,
+			"lsb": 12
+		},
+		{
+			"name": "Telephone",
+			"pc": 125,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Telephone 2",
+			"pc": 125,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Door Creak",
+			"pc": 125,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Door Slam",
+			"pc": 125,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Scratch",
+			"pc": 125,
+			"msb": 121,
+			"lsb": 4
+		},
+		{
+			"name": "Wind Chime",
+			"pc": 125,
+			"msb": 121,
+			"lsb": 5
+		},
+		{
+			"name": "Helicopter",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Car Engine",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Car Stopping",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Car Passing",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Car Crash",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 4
+		},
+		{
+			"name": "Siren",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 5
+		},
+		{
+			"name": "Train",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 6
+		},
+		{
+			"name": "Jet Plane",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 7
+		},
+		{
+			"name": "Starship",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 8
+		},
+		{
+			"name": "Burst Noise",
+			"pc": 126,
+			"msb": 121,
+			"lsb": 9
+		},
+		{
+			"name": "Applause",
+			"pc": 127,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Laughing",
+			"pc": 127,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Screaming",
+			"pc": 127,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Punch",
+			"pc": 127,
+			"msb": 121,
+			"lsb": 3
+		},
+		{
+			"name": "Heartbeat",
+			"pc": 127,
+			"msb": 121,
+			"lsb": 4
+		},
+		{
+			"name": "Foot Step",
+			"pc": 127,
+			"msb": 121,
+			"lsb": 5
+		},
+		{
+			"name": "Gunshot",
+			"pc": 129,
+			"msb": 121,
+			"lsb": 0
+		},
+		{
+			"name": "Machine Gun",
+			"pc": 129,
+			"msb": 121,
+			"lsb": 1
+		},
+		{
+			"name": "Lasergun",
+			"pc": 129,
+			"msb": 121,
+			"lsb": 2
+		},
+		{
+			"name": "Explosion",
+			"pc": 129,
+			"msb": 121,
+			"lsb": 3
+		}
+	],
+	"Drums": [
+		{
+			"index": 21
+		},
+		{
+			"name": "StereoPop Set (Standard)",
+			"pc": 1,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "StereoAmbien",
+			"pc": 33,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "Stereo Ballad (Room)",
+			"pc": 9,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "Analog Set",
+			"pc": 26,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "CP Dance",
+			"pc": 27,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "Power Set",
+			"pc": 17,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "Electronic Set",
+			"pc": 25,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "Brush Set",
+			"pc": 42,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "Orchestra Set",
+			"pc": 49,
+			"msb": 104,
+			"lsb": 0
+		},
+		{
+			"name": "SFX Set",
+			"pc": 57,
+			"msb": 104,
+			"lsb": 0
+		}
+	]
+}

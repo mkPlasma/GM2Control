@@ -1,0 +1,7 @@
+{
+	"name": "Edirol SD-90",
+	"midiDeviceName": "SD-90 PART A",
+	"sysexHeaderByte1": "00",
+	"sysexHeaderByte2": "00",
+	"toneListPath": "edirol-sd-90-tonelist.json"
+}

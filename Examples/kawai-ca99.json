@@ -1,0 +1,7 @@
+{
+	"name": "Kawai CA99",
+	"midiDeviceName": "USB Midi ",
+	"sysexHeaderByte1": "40",
+	"sysexHeaderByte2": "7f",
+	"toneListPath": "kawai-ca99-tonelist.json"
+}
