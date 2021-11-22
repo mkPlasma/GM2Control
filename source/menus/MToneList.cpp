@@ -150,8 +150,8 @@ void MToneList::listBoxChanged(ListBox* clb, int row){
 		_editor.setChannelName(_channel, tone.name);
 
 		// Save category and tone
-		_controller.setParameter("cat" + channelStr, _lbCategories->getLastRowSelected() / 65536.0f);
-		_controller.setParameter("tone" + channelStr, row / 65536.0f);
+		_controller.setParameter("cat" + channelStr, _lbCategories->getLastRowSelected());
+		_controller.setParameter("tone" + channelStr, row);
 		_controller.setParameter("toneSet" + channelStr, true);
 
 		return;

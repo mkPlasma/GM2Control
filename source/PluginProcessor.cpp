@@ -165,14 +165,14 @@ void GM2ControlProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& m
 
 		// Short message, send back to MIDI out
 		if(m.getRawDataSize() == 3){
-			union{ DWORD dwData; BYTE bData[4]; } msg;
-
-			for(int j = 0; j < 3; j++)
-				msg.bData[j] = m.getRawData()[j];
-			msg.bData[3] = 0;
+			uint8 msg[] = {
+				m.getRawData()[1],
+				m.getRawData()[0],
+				m.getRawData()[2]
+			};
 
 			// Send message
-			_controller.getMidiOut().shortMsg(msg.dwData);
+			_controller.getMidiOut().shortMsg(msg);
 
 
 			// Note on/off animation
@@ -190,6 +190,9 @@ void GM2ControlProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& m
 			}
 		}
 	}
+
+	// Clear input messages
+	midiMessages.clear();
 }
 
 void GM2ControlProcessor::initMidi(){

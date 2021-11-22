@@ -86,7 +86,8 @@ bool Controller::allNotesInChannelOff(int channel){
 }
 
 void Controller::setParameter(const string& parameter, float value){
-	_parameters.getParameter(parameter)->setValueNotifyingHost(value);
+	auto param = _parameters.getParameter(parameter);
+	param->setValueNotifyingHost(param->getNormalisableRange().convertTo0to1(value));
 }
 
 float Controller::getParameter(const string& parameter){
@@ -115,7 +116,7 @@ void Controller::setChannel(int channel){
 	if(_channel < 0 || _channel > 16)
 		_channel = 0;
 
-	setParameter("channel", _channel / 16.0f);
+	setParameter("channel", _channel);
 }
 
 int Controller::getChannel(){

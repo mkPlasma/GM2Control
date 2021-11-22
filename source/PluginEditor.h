@@ -16,10 +16,13 @@ public:
 	~GM2ControlEditor() override;
 
 	void paint(Graphics& g) override;
-	void resized() override;
 
 
 	void buttonClicked(Button* btn) override;
+
+	void mouseDown(const MouseEvent& event) override;
+	void mouseUp(const MouseEvent& event) override;
+	void mouseDrag(const MouseEvent& event) override;
 
 	void setChannelName(int channel, string name);
 
@@ -34,6 +37,9 @@ private:
 	Controller& _controller;
 
 	CLookAndFeel* _clf;
+
+	// Default channel button color
+	Colour _btnColor;
 
 	// Select file for device preset
 	TextButton* _btnDevice;
@@ -55,7 +61,6 @@ private:
 	// Channel selector buttons
 	TextButton** _btnChannels;
 
-
 	// For note on/off animation
 	ComponentAnimator* _animator;
 	//bool _note[16][128];
@@ -65,6 +70,14 @@ private:
 	// 2 - black (off)
 	// 3 - outline
 	Label* _noteAnim[4][16];
+
+
+	// Settings drag and drop
+	Label* _lDragDropIndicator;
+	int _dragDropChannel;
+
+
+	int getChannelButtonAtPos(int x, int y);
 
 	inline void animate(Component* comp, float alpha, int time, double startSpeed);
 };
