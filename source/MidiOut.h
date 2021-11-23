@@ -1,10 +1,11 @@
 #pragma once
 
-#include<windows.h>
-#include<mmsystem.h>
+#include<JuceHeader.h>
 #include<string>
 
+using namespace juce;
 using std::string;
+
 
 class Controller;
 
@@ -13,9 +14,11 @@ class MidiOut{
 
 	Controller& _controller;
 
-	int _midiDevNum;
+	std::unique_ptr<MidiOutput> _out;
 	bool _open;
-	HMIDIOUT _device;
+
+	MidiBuffer _buffer;
+	int _bufferIndex;
 
 public:
 	MidiOut(Controller& controller);
@@ -24,10 +27,14 @@ public:
 	void openDevice();
 	void closeDevice();
 
-	void shortMsg(DWORD data);
+	void shortMsg(MidiMessage msg);
+	void shortMsg(uint8* msg);
+
 	void cc(int channel, int cc, int val);
 	void setTone(int channel, int pc, int msb, int lsb);
 	void sysex(string data);
+
+	void sendMessagesInBuffer();
 
 	bool isOpen();
 };

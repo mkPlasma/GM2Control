@@ -66,7 +66,7 @@ String CSlider::getTextFromValue(double v){
 	}
 
 	// Custom values list
-	return String(dispValueList_.at(getValue() - min)) + getTextValueSuffix();
+	return String(dispValueList_.at((int)getValue() - min)) + getTextValueSuffix();
 }
 
 double CSlider::getValueFromText(const String& text){
@@ -136,7 +136,7 @@ void CSlider::sliderValueChanged(Slider* slider){
 
 	if(regex_search(id, matches, rgx)){
 
-		int val = slider->getValue();
+		int val = (int)slider->getValue();
 
 		// Adjust value for parameters that can be negative
 		val += _controller.getParameters().getParameter(id)->getNormalisableRange().getRange().getStart() < 0 ? 64 : 0;

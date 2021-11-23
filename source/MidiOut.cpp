@@ -13,8 +13,7 @@ using std::regex_search;
 using std::vector;
 
 
-MidiOut::MidiOut(Controller& controller) : _controller(controller), _midiDevNum(-1), _open(false), _device(NULL) {
-	
+MidiOut::MidiOut(Controller& controller) : _controller(controller), _open(false), _bufferIndex(0) {
 }
 
 MidiOut::~MidiOut(){
@@ -28,59 +27,51 @@ void MidiOut::openDevice(){
 		return;
 
 
-	MIDIOUTCAPS caps;
+	// Try opening MIDI device
+	auto devices = MidiOutput::getAvailableDevices();
 
-	// Find MIDI device
-	for(int i = 0; i < (int)midiOutGetNumDevs(); i++){
-		midiOutGetDevCaps(i, &caps, sizeof(MIDIOUTCAPS));
-
-		if((std::string)caps.szPname == _controller.getDevice().midiDeviceName){
-			_midiDevNum = i;
+	for(auto device : devices){
+		if(device.name.toStdString() == _controller.getDevice().midiDeviceName){
+			_out = MidiOutput::openDevice(device.identifier);
 			break;
 		}
 	}
 
-	// MIDI device not found
-	if(_midiDevNum == -1)
-		return;
-
-	// Open device
-	MMRESULT rs = midiOutOpen(&_device, _midiDevNum, NULL, 0, CALLBACK_NULL);
-
-	if(rs != MMSYSERR_NOERROR)
-		return;
-
-	_open = true;
+	_open = _out.get() != nullptr;
 }
 
 void MidiOut::closeDevice(){
 	if(_open){
-		midiOutReset(_device);
-		midiOutClose(_device);
-		_midiDevNum = -1;
+		_out.reset();
 		_open = false;
-		_device = NULL;
 	}
 }
 
-void MidiOut::shortMsg(DWORD data){
+void MidiOut::shortMsg(MidiMessage msg){
 
 	if(!_open)
 		return;
 
-	midiOutShortMsg(_device, data);
+	_buffer.addEvent(msg, _bufferIndex++);
+}
+
+void MidiOut::shortMsg(uint8* msg){
+
+	if(!_open)
+		return;
+
+	_buffer.addEvent(msg, 3, _bufferIndex++);
 }
 
 void MidiOut::cc(int channel, int cc, int val){
 	
-	union{ DWORD dwData; BYTE bData[4]; } msg;
+	uint8 msg[] = {
+		(uint8)(0xb0 + channel),
+		(uint8)cc,
+		(uint8)val
+	};
 
-	msg.bData[0] = (BYTE)(0xb0 + channel);
-	msg.bData[1] = (BYTE)cc;
-	msg.bData[2] = (BYTE)val;
-	msg.bData[3] = (BYTE)0;
-
-	shortMsg(msg.dwData);
+	shortMsg(msg);
 }
 
 void MidiOut::setTone(int channel, int pc, int msb, int lsb){
@@ -93,13 +84,13 @@ void MidiOut::setTone(int channel, int pc, int msb, int lsb){
 	cc(channel, 0x20, lsb);
 
 	// Program change
-	union{ DWORD dwData; BYTE bData[4]; } msg;
-	msg.bData[2] = (BYTE)0;
-	msg.bData[3] = (BYTE)0;
+	uint8 msg[] = {
+		(uint8)(0xc0 + channel),
+		(uint8)pc,
+		(uint8)0
+	};
 
-	msg.bData[0] = (BYTE)(0xc0 + channel);
-	msg.bData[1] = (BYTE)pc;
-	shortMsg(msg.dwData);
+	shortMsg(msg);
 }
 
 void MidiOut::sysex(string data){
@@ -107,6 +98,8 @@ void MidiOut::sysex(string data){
 	if(!_open)
 		return;
 
+	// Unused as of now
+	/*
 	// MIDI data
 	vector<char> msg;
 
@@ -146,6 +139,17 @@ void MidiOut::sysex(string data){
 		while((hdr.dwFlags & MHDR_DONE) != MHDR_DONE);
 
 	midiOutUnprepareHeader(_device, &hdr, sizeof(hdr));
+	*/
+}
+
+void MidiOut::sendMessagesInBuffer(){
+
+	// Send messages
+	_out.get()->sendBlockOfMessagesNow(_buffer);
+	
+	// Clear buffer
+	_buffer.clear();
+	_bufferIndex = 0;
 }
 
 bool MidiOut::isOpen(){

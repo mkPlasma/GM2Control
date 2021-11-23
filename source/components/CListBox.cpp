@@ -18,7 +18,7 @@ CListBox::CListBox(Controller& controller, string name, vector<string> contents)
 
 int CListBox::getNumRows(){
 	// Number of rows must change when contents are refreshed
-	return _forceRefresh ? 0 : _contents.size();
+	return _forceRefresh ? 0 : (int)_contents.size();
 }
 
 void CListBox::paintListBoxItem(int rowNumber, Graphics& g, int width, int height, bool rowIsSelected){
@@ -30,7 +30,7 @@ void CListBox::paintListBoxItem(int rowNumber, Graphics& g, int width, int heigh
 		g.fillAll(Colour(0xff202024));
 
 	g.setColour(Colours::white);
-	g.setFont(height * 0.7);
+	g.setFont((int)(height * 0.7f));
 	g.drawText(_contents[rowNumber], 5, 0, width - 5, height, Justification::centredLeft);
 }
 
@@ -51,11 +51,11 @@ void CListBox::setListener(CListBoxListener* l){
 	_listener = l;
 }
 
-void CListBox::selectedRowsChanged(int lastRowSelected){
+void CListBox::selectedRowsChanged(int rowSelected){
 
 	// For row change behavior defined elsewhere
 	if(_listener){
-		_listener->listBoxChanged(this, lastRowSelected);
+		_listener->listBoxChanged(this, rowSelected);
 		return;
 	}
 

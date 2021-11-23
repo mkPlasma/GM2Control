@@ -289,10 +289,10 @@ void GM2ControlEditor::mouseUp(const MouseEvent& event){
 		string param2 = param + std::to_string(ch);
 
 		// Store "dragged" parameter
-		int val = (int)_controller.getParameter(param1);
+		float val = _controller.getParameter(param1);
 
 		// Replace "dragged" parameter
-		_controller.setParameter(param1, (int)_controller.getParameter(param2));
+		_controller.setParameter(param1, _controller.getParameter(param2));
 
 		// Replace "dropped" parameter
 		_controller.setParameter(param2, val);

@@ -85,6 +85,11 @@ bool Controller::allNotesInChannelOff(int channel){
 	return true;
 }
 
+void Controller::setParameter(const string& parameter, int value){
+	auto param = _parameters.getParameter(parameter);
+	param->setValueNotifyingHost(param->getNormalisableRange().convertTo0to1((float)value));
+}
+
 void Controller::setParameter(const string& parameter, float value){
 	auto param = _parameters.getParameter(parameter);
 	param->setValueNotifyingHost(param->getNormalisableRange().convertTo0to1(value));

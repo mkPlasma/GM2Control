@@ -1,6 +1,10 @@
 #include "MToneList.h"
 
+#include<algorithm>
 #include"../PluginEditor.h"
+
+using std::min;
+using std::max;
 
 
 MToneList::MToneList(Controller& controller, GM2ControlEditor& editor) : _controller(controller), _editor(editor),

@@ -29,16 +29,16 @@ AudioProcessorValueTreeState::ParameterLayout GM2ControlProcessor::createParamet
 		string id;
 		string name;
 		ParamType type;
-		float v1;	// Min value for int/float, default for bool
-		float v2;	// Max value for int/float
-		float v3;	// Default value for int/float
+		float v1;	// Min value
+		float v2;	// Max value
+		float v3;	// Default value
 	};
 
 	// Parameters to add for all 16 channels
 	Parameter chParams[] = {
 		{"cat",			"Tone Category",		INT, 0, 65536, 0},
 		{"tone",		"Tone",					INT, 0, 65536, 0},
-		{"toneSet",		"Tone set",				BOOL, false},
+		{"toneSet",		"Tone set",				BOOL, 0, 0, false},
 
 		{"cc73 ch",		"Envelope Attack",		INT, -64, 63, 0},
 		{"cc75 ch",		"Envelope Decay",		INT, -64, 63, 0},
@@ -51,7 +51,7 @@ AudioProcessorValueTreeState::ParameterLayout GM2ControlProcessor::createParamet
 		{"cc74 ch",		"Filter Cutoff",		INT, -64, 63, 0},
 		{"cc71 ch",		"Filter Resonance",		INT, -64, 63, 0},
 
-		{"cc65 ch",		"Portamento",			BOOL, false},
+		{"cc65 ch",		"Portamento",			BOOL, 0, 0, false},
 		{"cc5 ch",		"Portamento Time",		INT, 0, 127, 0},
 
 		{"cc1 ch",		"Modulation",			INT, 0, 127, 0},
@@ -79,7 +79,7 @@ AudioProcessorValueTreeState::ParameterLayout GM2ControlProcessor::createParamet
 				break;
 
 			case BOOL:
-				params.add(std::make_unique<AudioParameterBool>(id, name, p.v1));
+				params.add(std::make_unique<AudioParameterBool>(id, name, p.v3));
 				break;
 			}
 		}
@@ -157,42 +157,38 @@ void GM2ControlProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& m
 		initMidi();
 
 
-	MidiBuffer processedMidi;
-	int time;
-	MidiMessage m;
+	for(auto meta : midiMessages){
 
-	for(MidiBuffer::Iterator i(midiMessages); i.getNextEvent(m, time);){
+		auto msg = meta.getMessage();
 
 		// Short message, send back to MIDI out
-		if(m.getRawDataSize() == 3){
-			uint8 msg[] = {
-				m.getRawData()[1],
-				m.getRawData()[0],
-				m.getRawData()[2]
-			};
+		if(msg.getRawDataSize() == 3){
 
 			// Send message
 			_controller.getMidiOut().shortMsg(msg);
 
 
 			// Note on/off animation
-			if(m.isNoteOn()){
-				_controller.setNote(m.getChannel() - 1, m.getNoteNumber(), true);
+			if(msg.isNoteOn()){
+				_controller.setNote(msg.getChannel() - 1, msg.getNoteNumber(), true);
 
 				if(getActiveEditor() != nullptr)
-					((GM2ControlEditor*)getActiveEditor())->noteOn(m.getChannel() - 1);
+					((GM2ControlEditor*)getActiveEditor())->noteOn(msg.getChannel() - 1);
 			}
-			else if(m.isNoteOff()){
-				_controller.setNote(m.getChannel() - 1, m.getNoteNumber(), false);
+			else if(msg.isNoteOff()){
+				_controller.setNote(msg.getChannel() - 1, msg.getNoteNumber(), false);
 
-				if(getActiveEditor() != nullptr && _controller.allNotesInChannelOff(m.getChannel() - 1))
-					((GM2ControlEditor*)getActiveEditor())->noteOff(m.getChannel() - 1);
+				if(getActiveEditor() != nullptr && _controller.allNotesInChannelOff(msg.getChannel() - 1))
+					((GM2ControlEditor*)getActiveEditor())->noteOff(msg.getChannel() - 1);
 			}
 		}
 	}
 
 	// Clear input messages
 	midiMessages.clear();
+
+	// Send messages in MIDI buffer
+	_controller.getMidiOut().sendMessagesInBuffer();
 }
 
 void GM2ControlProcessor::initMidi(){

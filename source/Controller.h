@@ -46,6 +46,7 @@ public:
 	void setNote(int channel, int note, bool on);
 	bool allNotesInChannelOff(int channel);
 
+	void setParameter(const string& parameter, int value);
 	void setParameter(const string& parameter, float value);
 	float getParameter(const string& parameter);
 
