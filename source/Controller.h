@@ -1,12 +1,14 @@
 #pragma once
 
 #include<JuceHeader.h>
+#include<string>
 #include"ToneList.h"
 #include"MidiOut.h"
-#include<string>
 
 using juce::AudioProcessorValueTreeState;
 using std::string;
+
+class GM2ControlProcessor;
 
 
 struct Device{
@@ -28,9 +30,11 @@ struct Device{
 
 class Controller{
 
+	GM2ControlProcessor& _processor;
+	AudioProcessorValueTreeState& _parameters;
+
 	Device _device;
 	MidiOut _midiOut;
-	AudioProcessorValueTreeState& _parameters;
 
 	// Selected channel
 	int _channel;
@@ -39,9 +43,11 @@ class Controller{
 	bool _noteOn[16][128];
 
 public:
-	Controller(AudioProcessorValueTreeState& parameters);
+	Controller(GM2ControlProcessor& processor);
 
 	void loadDevice(const string& path);
+
+	void setStatus(string status);
 
 	void setNote(int channel, int note, bool on);
 	bool allNotesInChannelOff(int channel);

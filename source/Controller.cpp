@@ -4,10 +4,13 @@
 #include<fstream>
 #include<streambuf>
 #include"json.hpp"
+#include"PluginProcessor.h"
+#include"PluginEditor.h"
 #include"HexFunc.h"
 
 
-Controller::Controller(AudioProcessorValueTreeState& parameters) : _midiOut(*this), _parameters(parameters), _channel(0) {
+Controller::Controller(GM2ControlProcessor& processor) : _processor(processor), _parameters(processor.getParameters()),
+		_midiOut(*this), _channel(0) {
 
 	for(int i = 0; i < 16; i++)
 		for(int j = 0; j < 128; j++)
@@ -70,6 +73,11 @@ void Controller::loadDevice(const string& path){
 	// Close any currently open device and open new one
 	_midiOut.closeDevice();
 	_midiOut.openDevice();
+}
+
+void Controller::setStatus(string status){
+	if(_processor.getActiveEditor())
+		((GM2ControlEditor*)_processor.getActiveEditor())->setStatus(status);
 }
 
 void Controller::setNote(int channel, int note, bool on){

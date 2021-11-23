@@ -1,16 +1,16 @@
 #include"MidiOut.h"
 
+#include<string>
+#include<vector>
+#include<regex>
+#include<assert.h>
 #include"Controller.h"
 #include"HexFunc.h"
-#include<string>
-#include<regex>
-#include<vector>
-#include<assert.h>
 
+using std::vector;
 using std::regex;
 using std::smatch;
 using std::regex_search;
-using std::vector;
 
 
 MidiOut::MidiOut(Controller& controller) : _controller(controller), _open(false), _bufferIndex(0) {
@@ -38,6 +38,9 @@ void MidiOut::openDevice(){
 	}
 
 	_open = _out.get() != nullptr;
+
+	if(_open)
+		_out.get()->startBackgroundThread();
 }
 
 void MidiOut::closeDevice(){
@@ -52,7 +55,14 @@ void MidiOut::shortMsg(MidiMessage msg){
 	if(!_open)
 		return;
 
+	// Add to buffer
 	_buffer.addEvent(msg, _bufferIndex++);
+
+	// Set status
+	_controller.setStatus(
+		byteToHex(msg.getRawData()[0]) + " " +
+		byteToHex(msg.getRawData()[1]) + " " +
+		byteToHex(msg.getRawData()[2]));
 }
 
 void MidiOut::shortMsg(uint8* msg){
@@ -60,7 +70,14 @@ void MidiOut::shortMsg(uint8* msg){
 	if(!_open)
 		return;
 
+	// Add to buffer
 	_buffer.addEvent(msg, 3, _bufferIndex++);
+
+	// Set status
+	_controller.setStatus(
+		byteToHex(msg[0]) + " " +
+		byteToHex(msg[1]) + " " +
+		byteToHex(msg[2]));
 }
 
 void MidiOut::cc(int channel, int cc, int val){
@@ -145,7 +162,7 @@ void MidiOut::sysex(string data){
 void MidiOut::sendMessagesInBuffer(){
 
 	// Send messages
-	_out.get()->sendBlockOfMessagesNow(_buffer);
+	_out.get()->sendBlockOfMessages(_buffer, Time::getMillisecondCounter(), 1000);
 	
 	// Clear buffer
 	_buffer.clear();

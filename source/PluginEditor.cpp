@@ -52,6 +52,20 @@ GM2ControlEditor::GM2ControlEditor(GM2ControlProcessor& p)
 
 	addAndMakeVisible(_lMidiStatus[1]);
 	addAndMakeVisible(_lMidiStatus[0]);
+	
+
+	// Status label
+	_lStatus[0] = new Label("", "");
+	_lStatus[0]->setBounds(352, 12, 376, 26);
+	_lStatus[0]->setColour(Label::backgroundColourId, Colours::black);
+
+	// Outline
+	_lStatus[1] = new Label("", "");
+	_lStatus[1]->setBounds(350, 10, 380, 30);
+	_lStatus[1]->setColour(Label::backgroundColourId, Colours::darkgrey);
+
+	addAndMakeVisible(_lStatus[1]);
+	addAndMakeVisible(_lStatus[0]);
 
 
 	// Tabs
@@ -138,13 +152,13 @@ GM2ControlEditor::GM2ControlEditor(GM2ControlProcessor& p)
 
 
 	// Drag and drop indicator
-	_lDragDropIndicator = new Label("");
-	_lDragDropIndicator->setColour(Label::backgroundColourId, Colours::transparentBlack);
-	_lDragDropIndicator->setColour(Label::textColourId, Colours::white);
-	_lDragDropIndicator->setAlpha(0.8f);
+	_lDragDropText = new Label("");
+	_lDragDropText->setColour(Label::backgroundColourId, Colours::transparentBlack);
+	_lDragDropText->setColour(Label::textColourId, Colours::white);
+	_lDragDropText->setAlpha(0.8f);
 
-	addAndMakeVisible(_lDragDropIndicator);
-	_lDragDropIndicator->setVisible(false);
+	addAndMakeVisible(_lDragDropText);
+	_lDragDropText->setVisible(false);
 
 	updateUI();
 }
@@ -156,11 +170,13 @@ GM2ControlEditor::~GM2ControlEditor(){
 	delete _btnDevice;
 	delete _lMidiStatus[0];
 	delete _lMidiStatus[1];
+	delete _lStatus[0];
+	delete _lStatus[1];
 	delete _tabs;
 	delete _mProperties;
 	delete _mToneList;
 	delete _animator;
-	delete _lDragDropIndicator;
+	delete _lDragDropText;
 
 	for(int i = 0; i < 16; i++)
 		delete _btnChannels[i];
@@ -254,7 +270,7 @@ void GM2ControlEditor::mouseDown(const MouseEvent& event){
 		return;
 
 	// Set indicator text
-	_lDragDropIndicator->setText(_btnChannels[ch]->getButtonText().substring(2), dontSendNotification);
+	_lDragDropText->setText(_btnChannels[ch]->getButtonText().substring(2), dontSendNotification);
 }
 
 void GM2ControlEditor::mouseUp(const MouseEvent& event){
@@ -264,7 +280,7 @@ void GM2ControlEditor::mouseUp(const MouseEvent& event){
 	int y = event.y + event.eventComponent->getBounds().getY();
 
 	// Make indicator invisible
-	_lDragDropIndicator->setVisible(false);
+	_lDragDropText->setVisible(false);
 
 	// Get channel button
 	int ch = getChannelButtonAtPos(x, y);
@@ -310,8 +326,8 @@ void GM2ControlEditor::mouseDrag(const MouseEvent& event){
 	int y = event.y + event.eventComponent->getBounds().getY();
 
 	// Set indicator visible and set position
-	_lDragDropIndicator->setVisible(true);
-	_lDragDropIndicator->setBounds(x, y - 16, CHANNEL_BTN_WIDTH, 20);
+	_lDragDropText->setVisible(true);
+	_lDragDropText->setBounds(x, y - 16, CHANNEL_BTN_WIDTH, 20);
 
 	// Get channel button
 	int ch = getChannelButtonAtPos(x, y);
@@ -354,6 +370,11 @@ void GM2ControlEditor::updateUI(){
 	// Update menus
 	_mProperties->updateChannel();
 	_mToneList->update();
+}
+
+
+void GM2ControlEditor::setStatus(string status){
+	_lStatus[0]->setText(status, dontSendNotification);
 }
 
 void GM2ControlEditor::noteOn(int channel){

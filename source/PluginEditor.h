@@ -28,6 +28,8 @@ public:
 
 	void updateUI();
 
+	void setStatus(string status);
+
 	// Channel note animation
 	void noteOn(int channel);
 	void noteOff(int channel);
@@ -53,6 +55,9 @@ private:
 	// MIDI status label
 	Label* _lMidiStatus[2];
 
+	// Status label
+	Label* _lStatus[2];
+
 	// Menus
 	TabbedComponent* _tabs;
 	MProperties* _mProperties;
@@ -73,7 +78,7 @@ private:
 
 
 	// Settings drag and drop
-	Label* _lDragDropIndicator;
+	Label* _lDragDropText;
 	int _dragDropChannel;
 
 

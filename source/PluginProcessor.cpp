@@ -10,7 +10,7 @@ using std::unique_ptr;
 
 GM2ControlProcessor::GM2ControlProcessor() : AudioProcessor(BusesProperties()),
 		_parameters(*this, nullptr, Identifier("GM2ControlParameters"), createParameterLayout()),
-		_controller(_parameters), _initialized(false)
+		_controller(*this), _initialized(false)
 {
 }
 
@@ -156,7 +156,6 @@ void GM2ControlProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& m
 	if(!_initialized)
 		initMidi();
 
-
 	for(auto meta : midiMessages){
 
 		auto msg = meta.getMessage();
@@ -166,7 +165,6 @@ void GM2ControlProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& m
 
 			// Send message
 			_controller.getMidiOut().shortMsg(msg);
-
 
 			// Note on/off animation
 			if(msg.isNoteOn()){
@@ -178,7 +176,7 @@ void GM2ControlProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& m
 			else if(msg.isNoteOff()){
 				_controller.setNote(msg.getChannel() - 1, msg.getNoteNumber(), false);
 
-				if(getActiveEditor() != nullptr && _controller.allNotesInChannelOff(msg.getChannel() - 1))
+				if(getActiveEditor() && _controller.allNotesInChannelOff(msg.getChannel() - 1))
 					((GM2ControlEditor*)getActiveEditor())->noteOff(msg.getChannel() - 1);
 			}
 		}
@@ -271,7 +269,7 @@ void GM2ControlProcessor::setStateInformation(const void* data, int sizeInBytes)
 		}
 
 		// Update editor UI
-		if(getActiveEditor() != nullptr)
+		if(getActiveEditor())
 			((GM2ControlEditor*)getActiveEditor())->updateUI();
 	}
 }
